@@ -1,0 +1,39 @@
+<head data-sly-use.clientLib="${'/libs/granite/sightly/templates/clientlib.html'}">
+
+<!--/* for css+js */-->
+<meta data-sly-call="${clientLib.all @ categories='traininglib'}" data-sly-unwrap></meta>
+
+
+<div data-sly-use.traininigvaraiable="${'com.adobe.aem.guides.core.models.Training2' @ rAttribute='test sample'}">
+
+<p class='trainingss'>
+dummy text: hello vishnu training2.<br>
+do not delete/modify this component<br>
+
+Title1:${traininigvaraiable.title1}<br>
+Title2:${traininigvaraiable.title2}<br>
+url:${traininigvaraiable.linkURL} <br>
+id from calss:${traininigvaraiable.id} <br>
+traininigvaraiable.value: ${traininigvaraiable.value}<br>
+current page title: ${traininigvaraiable.currentPageTitle} <br>
+sampleVariable:${traininigvaraiable.requestAttribute} <br>
+Us Page Name:${traininigvaraiable.usPage} <br>
+Last Modified by:${traininigvaraiable.modifiedBy} <br>
+</p>
+</div>
+
+======Using Service qand Iterator======
+<div data-sly-list.item="${traininigvaraiable.pagesList}">
+<p>Page ${itemList} Title :<b>${item.title}</b></p>
+</div>
+======Uisng Service and List======
+<div data-sly-list.item="${traininigvaraiable.pageTitleList}">
+<p>Page ${itemList} Title :<b>${item}</b></p>
+</div>
+Last Modified by:${traininigvaraiable.pageTitleList} <br>
+Get name from multi:${traininigvaraiable.nameFromService} <br>
+Get name from multiB:${traininigvaraiable.nameFromServiceB} <br>
+Reference with Target:${traininigvaraiable.nameWithReferenceTarget} <br>
+<input type="button" value="Click me" onclick="msg()">
+
+
