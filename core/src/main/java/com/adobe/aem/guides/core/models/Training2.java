@@ -51,8 +51,7 @@ import java.util.Optional;
 public class Training2 implements Training2Inte {
 
 	public static final Logger LOG=org.slf4j.LoggerFactory.getLogger(Training2.class);
-	int abc=124;
-	
+
 	@SlingObject
 	ResourceResolver resourceResolver;
 	
